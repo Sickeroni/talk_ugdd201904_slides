@@ -162,7 +162,7 @@ static void blinki(){
 
 
 	<section>
-			<h3>complexity kill</h3>
+			<h3>"complexity kill"</h3>
 			<h4>Niklas Hauser</h4>
 		</section>
 </section>
@@ -210,7 +210,7 @@ __enable_irq();</code></pre>
 	<section>
 		<h3>QUIZTIME</h3>
 
-				<pre><code class="c++" data-trim contenteditable>							
+				<pre><code class="c++" data-trim>							
 volatile uint32_t input; //fakeinput
 volatile uint32_t output; //fakeoutput
 
@@ -226,7 +226,7 @@ volatile uint32_t ringbuffer[ringbuffersize];
 	<section>
 		<h3>QUIZTIME</h3>
 
-				<pre><code class="c++" data-trim contenteditable>							
+				<pre><code class="c++" data-trim >							
 void one() { // called in main()
     ringbuffer[read_counter] = input;
     read_counter++;
@@ -235,12 +235,8 @@ void one() { // called in main()
     }
 }
 </code></pre>
-	</section>
 
-	<section>
-		<h3>QUIZTIME</h3>
-
-				<pre><code class="c++" data-trim contenteditable>							
+				<pre><code class="c++" data-trim >							
 void two() { // called in Interrupt Service Routine!
     while (read_counter > write_counter) {
         output = ringbuffer[write_counter];
@@ -259,11 +255,11 @@ void two() { // called in Interrupt Service Routine!
 <section>
 		<h3>QUIZTIME - SOLUTION</h3>
 
-				<pre><code class="c++" data-trim contenteditable>							
+				<pre><code class="c++" data-trim>							
 void one() { // called in main()
     // read_counter = 29/maximum
     ringbuffer[read_counter] = input; 
-	read_counter++; 
+    read_counter++; 
     // read_counter = 30
     // === a wild Interrupt appears, its super effective ===
     if (read_counter >= ringbuffersize) {
@@ -276,7 +272,7 @@ void one() { // called in main()
 <section>
 	<h3>QUIZTIME - SOLUTION</h3>
 
-			<pre><code class="c++" data-trim contenteditable>							
+			<pre><code class="c++" data-trim>							
 void two() { // called in Interrupt Service Routine!
     // read_counter = 30
     // write_counter = 29
@@ -395,7 +391,7 @@ int __io_putchar(int ch)
 			<ul>
 					<li class="fragment fade-in">could be easy done at  compiletime</li>
 					<li class="fragment fade-in">possible in C (defines), easier in C++</li>
-					<li class="fragment fade-in">"its not that compl icated, can be done easy..."</li>
+					<li class="fragment fade-in">"its not that complicated, can be done easy..."</li>
 					<li class="fragment fade-in">its fast and easy if you already worked with usbdescriptors</li>
 				</ul>
 	</section>
@@ -614,7 +610,7 @@ for (std::uint32_t value : array)
 
 	<section>
 		<h2>
-				You are happy about little things</h2>
+				"You are happy about little things"</h2>
 		<h3>Rene Kita</h3>
 	</section>
 
